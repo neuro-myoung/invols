@@ -29,7 +29,8 @@ def load_file(path):
     df, dfcache - two copies of the file reformatted into a dataframe.
     '''
 
-    lineIndices = []                                      
+    lineIndices = []         
+    st.write(type(path))                             
     rawFile = path.getvalue().strip().split("\n")         # Splits string at \n and removes trailing spaces
 
     count=0                                               
