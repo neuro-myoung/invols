@@ -85,10 +85,6 @@ def plot_sweeps(df):
       go.Scatter(mode='lines', x=df.tin0, y=df.in0,
                  marker=dict(color='blue'),
                  hovertemplate='x: %{x}<br>' + 'y: %{y}<br>'),
-                 labels={
-                     "tin0": "Time (ms)",
-                     "in0": "Volts (V)"
-                 },
                  row=1, col=1)
 
     fig.add_trace(
@@ -107,6 +103,11 @@ def plot_sweeps(df):
       go.Scatter(mode='lines', x=approach.position, y=approach.in0, marker=dict(color='black'),
                 hovertemplate='x: %{x}<br>' + 'y: %{y}<br>'),
                 row=2, col=1)
+
+    fig.update_xaxes(title_text="Time (ms)", row=1, col=1)
+    fig.update_yaxes(title_text="Voltage (V)", row=1, col=1)
+    fig.update_xaxes(title_text="Position (nm)", row=2, col=1)
+    fig.update_yaxes(title_text="Voltage (V)", row=2, col=1)
 
     fig.update_layout(
          height=600,
