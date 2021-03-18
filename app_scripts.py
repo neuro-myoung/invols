@@ -131,13 +131,13 @@ def highlight_fig(fig, window):
     fig - a plotly figure object
     '''
 
-    highlight_color = "LightSalmon"
+    highlight_color = "LightBlue"
     fig.update_layout(
         shapes=[
             dict(
                 type="rect",
                 xref="x2",
-                yref="paper",
+                yref="y2",
                 x0=window[0],
                 y0=0,
                 x1=window[1],
