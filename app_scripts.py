@@ -85,6 +85,10 @@ def plot_sweeps(df):
       go.Scatter(mode='lines', x=df.tin0, y=df.in0,
                  marker=dict(color='blue'),
                  hovertemplate='x: %{x}<br>' + 'y: %{y}<br>'),
+                 labels={
+                     "tin0": "Time (ms)",
+                     "in0": "Volts (V)"
+                 },
                  row=1, col=1)
 
     fig.add_trace(
