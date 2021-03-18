@@ -137,7 +137,7 @@ def highlight_fig(fig, window):
             dict(
                 type="rect",
                 xref="x2",
-                yref="y2",
+                yref="paper",
                 x0=window[0],
                 x1=window[1],
                 fillcolor=highlight_color,
