@@ -4,7 +4,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-
 ## Page setup
 st.beta_set_page_config(
     page_title="InvOLS",
@@ -19,9 +18,7 @@ data = st.sidebar.file_uploader("", type=["csv", "asc", "txt"])
 if data is None:
     st.title('Inverse Optical Lever Sensitivity')
     st.markdown('This app is used to calibrate the inverse optical lever sensitivity. The piezoscanner position is determined using the manufacturer calibration and the applied voltage. The photodetector vertical difference signal (V) is then plotted as a function of piezoscanner position. We make the assumption that when the cantilever presses down on a hard surface the slope of the cantilever tip position as a function of the piezoscanner position = 1 and calculate the sensitivity in nm/V. Select a linear region of the plot and press fit line to see the sensitivity value.')
-    st.warning('Upload a file to run the app...')
-    st.stop()
-
+    data = "example/example.asc"
 
 st.title('Inverse Optical Lever Sensitivity')
 st.markdown('This app is used to calibrate the inverse optical lever sensitivity. The piezoscanner position is determined using the manufacturer calibration and the applied voltage. The photodetector vertical difference signal (V) is then plotted as a function of piezoscanner position. We make the assumption that when the cantilever presses down on a hard surface the slope of the cantilever tip position as a function of the piezoscanner position = 1 and calculate the sensitivity in nm/V. Select a linear region of the plot and press fit line to see the sensitivity value.')
